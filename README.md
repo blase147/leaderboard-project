@@ -9,10 +9,10 @@ Here is a [link] (https://blase147.github.io/leaderboard-project/dist/index.html
 - Javascript
 
 # Technologies used 
---GitHub 
---Visual Studio Code 
---GitBash
---Webpack
+-GitHub 
+-Visual Studio Code 
+-GitBash
+-Webpack
 
 ## Getting Started
 

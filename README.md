@@ -1,9 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-All changes were successful as linters errors were all fixed. 
-
 ## LEADERBOARD
-Here is a [link] (https://blase147.github.io/to-do-list/dist/index.html) to the live page.
+Here is a [link] (https://blase147.github.io/leaderboard-project/dist/index.html) to the live page.
 # Built With
 
 --Major languages 
@@ -21,7 +19,7 @@ Here is a [link] (https://blase147.github.io/to-do-list/dist/index.html) to the 
 
 To get a local copy up and running follow these simple example steps.
 
-$ git clone https://github.com/blase147/to-do-list.git
+$ git clone https://github.com/blase147/leaderboard-project.git
 
 $ git checkout -b todolist-project
 
@@ -40,7 +38,7 @@ $ git pull origin todolist-project
 
 - Contributions, issues, and feature requests are welcome!
 
-  Feel free to check the issues page.https://github.com/blase147/awesome-books/issues
+  Feel free to check the issues page.https://github.com/blase147/leaderboard-project/issues
 
 ## Show your support
 

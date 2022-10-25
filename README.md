@@ -1,18 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## LEADERBOARD
+# LEADERBOARD
 Here is a [link] (https://blase147.github.io/leaderboard-project/dist/index.html) to the live page.
 
-# Major languages 
+## Major languages 
 - HTML 
 - CSS
 - Javascript
 
-# Technologies used 
--GitHub 
--Visual Studio Code 
--GitBash
--Webpack
+## Technologies used 
+- GitHub 
+- Visual Studio Code 
+- GitBash
+- Webpack
 
 ## Getting Started
 

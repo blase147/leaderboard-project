@@ -2,14 +2,13 @@
 
 ## LEADERBOARD
 Here is a [link] (https://blase147.github.io/leaderboard-project/dist/index.html) to the live page.
-# Built With
 
---Major languages 
+# Major languages 
 - HTML 
 - CSS
 - Javascript
 
-- Technologies used 
+# Technologies used 
 --GitHub 
 --Visual Studio Code 
 --GitBash

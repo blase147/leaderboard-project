@@ -2,7 +2,7 @@
 
 All changes were successful as linters errors were all fixed. 
 
-## TODO LIST PROJECT
+## LEADERBOARD
 Here is a [link] (https://blase147.github.io/to-do-list/dist/index.html) to the live page.
 # Built With
 

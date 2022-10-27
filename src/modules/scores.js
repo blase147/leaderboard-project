@@ -20,7 +20,7 @@ export const displayScore = (score) => {
                                 <td>${score.user}</td>
                                 <td>${score.score}</td>
                             </tr>
-                         </table>
+                        </table>
     `;
 };
 

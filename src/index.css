@@ -19,12 +19,12 @@ header h1 {
   width: 40%;
 }
 
-table:nth-child(even) {
-  background-color: #f5eeee;
-}
-
 table {
   width: 100%;
+}
+
+table:nth-child(even) {
+  background-color: #f5eeee;
 }
 
 table td {
@@ -49,9 +49,9 @@ table td {
 
 .refreshBtn {
   font-size: 20px;
-border-radius: 20px;
-background-color: blue;
-color: white;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
 }
 
 form {

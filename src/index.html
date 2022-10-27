@@ -12,50 +12,25 @@
                 <h1>Leaderboard</h1>
             </header>
             <main>
+
             <section id="scores" class="scores">
-                <h2>Recent Scores <button>Refresh</button></h2>
+                <h2>Recent Scores <button class="refreshBtn" type="button">Refresh</button></h2>
+
                 <div class="tableContainer">
-                    <table>
-                        <tr>
-                            <td>Name</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>20</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>78</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>125</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>77</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>42</td>
-                        </tr>
-                    </table>
+                    
                 </div>
+
             </section>
+
             <section class="formConatiner">
                 <h2>Add your score</h2>
-                <form action="">
-                <input type="text" placeholder="Your name">
-                <input type="text" placeholder="Your score">
-                <button type="submit">Submit</button>
-            </form>
+                <form method="POST">
+                    <input class="name" name="name" type="text" placeholder="Your name">
+                    <input class="score" name="score" type="text" placeholder="Your score">
+                    <input class="saveScoreBtn" type="button" name="submit" value="submit">
+                </form>
             </section>
     </main>
-    
+
 </body>
 </html>

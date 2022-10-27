@@ -8,11 +8,12 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      title: 'development',
+      template: 'src/index.html',
+      title: 'Leaderboard Project',
+      filename:'index.html',
     }),
   ],
-
+  mode:'development',
   output: {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'dist'),

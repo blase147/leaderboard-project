@@ -116,7 +116,47 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\n\n//# sourceURL=webpack://leaderboard-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _modules_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scores.js */ \"./src/modules/scores.js\");\n/* harmony import */ var _modules_refreshScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/refreshScore.js */ \"./src/modules/refreshScore.js\");\n/* harmony import */ var _modules_saveScore_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/saveScore.js */ \"./src/modules/saveScore.js\");\n\n\n\n\n\n_modules_refreshScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].refreshBtn();\n(0,_modules_saveScore_js__WEBPACK_IMPORTED_MODULE_3__.clickBtn)();\n\ndocument.addEventListener('DOMContentLoaded', (0,_modules_scores_js__WEBPACK_IMPORTED_MODULE_1__.display)());\n\n\n//# sourceURL=webpack://leaderboard-project/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/postScore.js":
+/*!**********************************!*\
+  !*** ./src/modules/postScore.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Post)\n/* harmony export */ });\nclass Post {\n    static post = async (data = {}) => {\n    //   const apiKey = 'Zl4d7IVkemOTTVg2fUdz';\n    //   const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';\n    //   const url = `${baseURL}games/${apiKey}/scores/`;\n      const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/01GGC537PTHJS7Z7FVYKH885J9/scores/';\n      const response = await fetch(url, {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify(data),\n      });\n      const status = await response.json();\n      return status.result;\n    };\n}\n\n\n//# sourceURL=webpack://leaderboard-project/./src/modules/postScore.js?");
+
+/***/ }),
+
+/***/ "./src/modules/refreshScore.js":
+/*!*************************************!*\
+  !*** ./src/modules/refreshScore.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Refresh)\n/* harmony export */ });\n/* harmony import */ var _saveScore_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./saveScore.js */ \"./src/modules/saveScore.js\");\n/* harmony import */ var _scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scores.js */ \"./src/modules/scores.js\");\n\n\n\nclass Refresh {\n  static refreshBtn = () => {\n    const btn = document.querySelector('.refreshBtn');\n    btn.addEventListener('click', () => {\n      (0,_scores_js__WEBPACK_IMPORTED_MODULE_1__.displayScore)(_saveScore_js__WEBPACK_IMPORTED_MODULE_0__.array.pop());\n    });\n  };\n}\n\n//# sourceURL=webpack://leaderboard-project/./src/modules/refreshScore.js?");
+
+/***/ }),
+
+/***/ "./src/modules/saveScore.js":
+/*!**********************************!*\
+  !*** ./src/modules/saveScore.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"array\": () => (/* binding */ array),\n/* harmony export */   \"clickBtn\": () => (/* binding */ clickBtn),\n/* harmony export */   \"createObj\": () => (/* binding */ createObj)\n/* harmony export */ });\n/* harmony import */ var _postScore_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./postScore.js */ \"./src/modules/postScore.js\");\n\n\nconst array = [];\nconst createObj = (user, score) => {\n  const obj = { user: user.value, score: score.value };\n  return obj;\n};\n\nconst clickBtn = () => {\n  const addBtn = document.querySelector('.saveScoreBtn');\n  addBtn.addEventListener('click', () => {\n    const name = document.querySelector('.name');\n    const score = document.querySelector('.score');\n    const obj = createObj(name, score);\n    array.push(obj);\n    _postScore_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].post(obj);\n    name.value = '';\n    score.value = '';\n  });\n};\n\n//# sourceURL=webpack://leaderboard-project/./src/modules/saveScore.js?");
+
+/***/ }),
+
+/***/ "./src/modules/scores.js":
+/*!*******************************!*\
+  !*** ./src/modules/scores.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"display\": () => (/* binding */ display),\n/* harmony export */   \"displayScore\": () => (/* binding */ displayScore),\n/* harmony export */   \"getScore\": () => (/* binding */ getScore)\n/* harmony export */ });\nconst getScore = async (callback = null) => {\n  // const apiKey = '0Z92XESxHIscbuYy2R5g';\n  // const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/01GGC537PTHJS7Z7FVYKH885J9/scores/';\n  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/01GGC537PTHJS7Z7FVYKH885J9/scores/';\n  // const url = `${baseURL}games/${apiKey}/scores/`;\n  const response = await fetch(url);\n  const data = await response.json();\n  const scores = data.result;\n  const sortScores = scores.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));\n  sortScores.forEach((score) => {\n    callback(score);\n  });\n  return sortScores;\n};\n\nconst displayScore = (score) => {\n  const scores = document.querySelector('.tableContainer');\n  scores.innerHTML += `<table>\n                            <tr>\n                                <td>${score.user}</td>\n                                <td>${score.score}</td>\n                            </tr>\n                         </table>\n    `;\n};\n\nconst display = () => {\n  getScore(displayScore);\n};\n\n//# sourceURL=webpack://leaderboard-project/./src/modules/scores.js?");
 
 /***/ })
 
